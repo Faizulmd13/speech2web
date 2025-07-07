@@ -1,5 +1,5 @@
 import pyttsx3
-engine = pyttsx3.init(driverName='espeak')
+engine = pyttsx3.init()
 
 def text_to_voice(text):
     engine.setProperty('rate', 120)
