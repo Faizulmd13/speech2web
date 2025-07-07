@@ -2,14 +2,12 @@ import utils
 
 def router(text):
     command = utils.get_first_words(text)
-    command = command.lower()
+    command = [word.lower() for word in command]
 
-    if command == "play":
-        print("Opening Youtube")
-    elif command == "put":
-        print("Opening Youtube music")
-    elif command == "tell":
-        print("Opening Wikipedia")
+    if command[0] == "play" or command[:2] == ["put", "on"]:
+        return 1
+    elif command[:3] == ["tell", "me", "about"]:
+        return 2
     else:
-        print("Not a supported commands")
+        return -1
 
