@@ -10,7 +10,7 @@ def main():
     if code == 1:
         web_actions.youtube(text)
     elif code == 2:
-        pass
+        web_actions.wiki(text)
     else:
         web_actions.youtube(text)
 

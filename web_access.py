@@ -12,7 +12,7 @@ def youtube(text):
 
     title = first_result["title"]
     print(f"Playing {title}")
-    
+
     url = first_result["link"]
     webbrowser.open(url)
 
