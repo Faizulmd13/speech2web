@@ -66,7 +66,6 @@ The assistant will search YouTube and play the top result.
 - PyAudio
 - pyttsx3
 - youtube-search-python
-- requests
 - webbrowser (standard library)
 
 ## License
