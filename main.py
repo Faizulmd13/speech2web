@@ -1,17 +1,19 @@
 from recognizer import audio_recognizer
 from command_router import router
-import web_actions
+import web_access 
+import time
 
 def main():
-    text = audio_recognizer()
-    
-    code = router(text)
+    while(True):
+        text = audio_recognizer()
+        
+        code = router(text)
 
-    if code == 1:
-        web_actions.youtube(text)
-    elif code == 2:
-        web_actions.wiki(text)
-    else:
-        web_actions.youtube(text)
+        if code == 1:
+            web_access.youtube(text)
+            break
+        else:
+            time.sleep(5)
+
 
 main()
